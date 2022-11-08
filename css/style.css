@@ -1,0 +1,51 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+
+#output,
+#box2 {
+  width: 90%;
+  /* height: 400px; */
+  margin: 5px;
+  padding: 5px;
+}
+
+#output {
+  background: #ddd;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: smaller;
+  white-space: pre;
+  border: 1px solid red;
+  padding: 10px;
+}
+
+#box2 {
+  background: #eec;
+}
+
+.button {
+  background-color: #04aa6d;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+
+#rightButton {
+  background-color: blue;
+}
+
+#leftButton {
+  background-color: darkorange;
+}
+
+#middleButton {
+  border-radius: 5px;
+}

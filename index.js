@@ -1,17 +1,25 @@
 // Import stylesheets
-import './style.css';
+import './css/style.css';
+
+const appDiv = document.getElementById('app');
+const outputDiv = document.getElementById('output');
+
+// Helper
+function print(s) {
+  console.log(s);
+  outputDiv.innerText += s + '\n';
+}
 
 // Write Javascript code!
-const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 let aString = 'Hello and こんにちは';
-let anotherString = '';
+let anotherString = 'Test 2 3 4';
 
 let aNumber = 123.456;
 let anotherNumber = 987;
 
-let anArray = [10, 11, 12];
+let anArray = [10, 11, 12, 13, 14, 15];
 let anotherArray = [100, 101, 102, 103];
 
 let aSong = {
@@ -41,8 +49,85 @@ let fourthSong = {
   releaseYear: 1990,
 };
 
-const outputDiv = document.getElementById('output');
+// Follow
+// https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+
+print(123);
+print(aNumber);
+
+print(typeof aNumber);
+
+
+
+// let N = 10;
+// if (aNumber > N) {
+//   print(`${aNumber} is greater than ${N}`);
+// }
+// if (aNumber === N) {
+//   print(`${aNumber} is strictly equal to ${N}`);
+// } else {
+//   print(`${aNumber} is not strictly equal to ${N}`);
+// }
+
+// let iLikeApples=true;
+// let iLikeBananas=false;
+// if (iLikeApples === true) {
+//   print("I really like apples!");
+// }
+// if (iLikeApples && iLikeBananas) {
+//   print("I like both apples and bananas");
+// }
+// if (iLikeApples || iLikeBananas) {
+//   print("I like apples or bananas or both");
+// }
+// if (iLikeApples !== iLikeBananas) {
+//   print("I like either apples or bananas");
+// }
+
+// Functions
+
+// function multiply(x, y) {
+//   return x*y;
+// }
+// function divide(x, y) {
+//   return x/y;
+// }
+// print(multiply(6,7));
+// print(divide(10,3));
+// print(divide(5,0));
+// Modify divide() to return 0 in case of y is zero
+
+
+// Loops
+
+
+
+
+
+
 
 // outputDiv.innerText += JSON.stringify(aSong, null, 4);
-let listOfSongs = [aSong, anotherSong, thirdSong, fourthSong];
-outputDiv.innerText += JSON.stringify(listOfSongs, null, 4);
+// let listOfSongs = [aSong, anotherSong, thirdSong, fourthSong];
+// outputDiv.innerText += JSON.stringify(listOfSongs, null, 4);
+
+// Button interactive (change counter)
+
+// let counter = 0;
+// const leftButton = document.getElementById('leftButton');
+// const middleButton = document.getElementById('middleButton');
+// const rightButton = document.getElementById('rightButton');
+// leftButton.innerText = '<<';
+// rightButton.innerText = '>>';
+// middleButton.innerText = counter;
+
+// leftButton.addEventListener('click', function () {
+//   counter = counter - 10;
+//   print(counter);
+// });
+// rightButton.addEventListener('click', function () {
+//   counter = counter + 10;
+//   print(counter);
+// });
+// middleButton.addEventListener('click', function () {
+//   middleButton.innerText = counter;
+// });
