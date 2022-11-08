@@ -1,0 +1,24 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+
+#output,
+#box2 {
+  width: 90%;
+  /* height: 400px; */
+  margin: 5px;
+  padding: 5px;
+}
+
+#output {
+  background: #ddd;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: smaller;
+  white-space: pre;
+}
+
+#box2 {
+  background: #eec;
+}
