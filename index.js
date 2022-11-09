@@ -99,25 +99,32 @@ print(typeof aNumber);
 
 
 // Loops
-for (let i=1; i<=4; ++i) {
+
+for (let i=1; i<=4; i=i+1) {
   print(i);
 }
 print(`anArray = [${anArray}]`);
 for (let i=0; i<anArray.length; ++i) {
-  print(`i=${i}, anArray[${i}]=${anArray[i]}`);
+  print(`for loop: i=${i}, anArray[${i}]=${anArray[i]}`);
 }
 
 function display(v, i) {
   print(i+":"+v);
 }
 anArray.forEach(display);
-anArray.forEach((x) => {print(x);});
+anArray.forEach((x) => {print(`x=${x}`);});
 
-let i=0;
-while (i < anArray.length) {
-  print(`i=${i}, anArray[${i}]=${anArray[i]}`);
-  ++i;
-}
+// let i=0;
+// while (i < anArray.length) {
+//   print(`while: i=${i}, anArray[${i}]=${anArray[i]}`);
+//   ++i;
+// }
+
+// i=0
+// do {
+//   print(`do..while: i=${i}, anArray[${i}]=${anArray[i]}`);
+//   ++i;
+// } while (i<anArray.length);
 
 
 
