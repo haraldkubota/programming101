@@ -151,15 +151,16 @@ print(typeof aNumber);
 // middleButton.innerText = counter;
 
 // leftButton.addEventListener('click', function () {
-//   counter = counter - 10;
+//   counter = counter - 15;
 //   middleButton.innerText = counter;
 //   print(counter);
 // });
 // rightButton.addEventListener('click', function () {
-//   counter = counter + 10;
+//   counter = counter + 15;
 //   middleButton.innerText = counter;
 // });
 // middleButton.addEventListener('click', function () {
 //   middleButton.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+//   middleButton.style.transform = `rotate(${counter}deg)`;
 //   print(counter);
 // });
