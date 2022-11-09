@@ -4,7 +4,7 @@ import './css/style.css';
 const appDiv = document.getElementById('app');
 const outputDiv = document.getElementById('output');
 
-// Helper
+// Helper function
 function print(s) {
   console.log(s);
   outputDiv.innerText += s + '\n';
@@ -20,6 +20,7 @@ let aNumber = 123.456;
 let anotherNumber = 987;
 
 let anArray = [10, 11, 12, 13, 14, 15];
+let colors = ['yellow', 'blue', 'green', 'pink', 'gray' ];
 let anotherArray = [100, 101, 102, 103];
 
 let aSong = {
@@ -51,13 +52,14 @@ let fourthSong = {
 
 // Follow
 // https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+// and
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
 
+// Types
 print(123);
 print(aNumber);
 
 print(typeof aNumber);
-
-
 
 // let N = 10;
 // if (aNumber > N) {
@@ -97,22 +99,30 @@ print(typeof aNumber);
 // print(divide(5,0));
 // Modify divide() to return 0 in case of y is zero
 
+// Functions via =>
+// See https://blog.bitsrc.io/arrow-functions-vs-regular-functions-in-javascript-458ccd863bc1
+// for the finer details how they differ from function definition
+
+// // const multiply = (x, y) => { return x*y; }
+// const multiply = (x, y) => x*y;
+
+// print(multiply(6,7));
 
 // Loops
 
-for (let i=1; i<=4; i=i+1) {
-  print(i);
-}
-print(`anArray = [${anArray}]`);
-for (let i=0; i<anArray.length; ++i) {
-  print(`for loop: i=${i}, anArray[${i}]=${anArray[i]}`);
-}
-
-function display(v, i) {
-  print(i+":"+v);
-}
-anArray.forEach(display);
-anArray.forEach((x) => {print(`x=${x}`);});
+// for (let i=1; i<=4; i=i+1) {
+//   print(i);
+// }
+// print(`anArray = [${anArray}]`);
+// for (let i=0; i<anArray.length; ++i) {
+//   print(`for loop: i=${i}, anArray[${i}]=${anArray[i]}`);
+// }
+// function display(v, i) {
+//   print(`v=${v}, i=${i}`);
+// }
+// anArray.forEach(display);
+// anArray.forEach((v, i) => {print(`v=${v}, i=${i}`);});
+// anArray.forEach((x) => {print(`x=${x}`);});
 
 // let i=0;
 // while (i < anArray.length) {
@@ -125,9 +135,6 @@ anArray.forEach((x) => {print(`x=${x}`);});
 //   print(`do..while: i=${i}, anArray[${i}]=${anArray[i]}`);
 //   ++i;
 // } while (i<anArray.length);
-
-
-
 
 // outputDiv.innerText += JSON.stringify(aSong, null, 4);
 // let listOfSongs = [aSong, anotherSong, thirdSong, fourthSong];
@@ -153,5 +160,6 @@ anArray.forEach((x) => {print(`x=${x}`);});
 //   middleButton.innerText = counter;
 // });
 // middleButton.addEventListener('click', function () {
+//   middleButton.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
 //   print(counter);
 // });
