@@ -99,9 +99,25 @@ print(typeof aNumber);
 
 
 // Loops
+for (let i=1; i<=4; ++i) {
+  print(i);
+}
+print(`anArray = [${anArray}]`);
+for (let i=0; i<anArray.length; ++i) {
+  print(`i=${i}, anArray[${i}]=${anArray[i]}`);
+}
 
+function display(v, i) {
+  print(i+":"+v);
+}
+anArray.forEach(display);
+anArray.forEach((x) => {print(x);});
 
-
+let i=0;
+while (i < anArray.length) {
+  print(`i=${i}, anArray[${i}]=${anArray[i]}`);
+  ++i;
+}
 
 
 
@@ -122,12 +138,13 @@ print(typeof aNumber);
 
 // leftButton.addEventListener('click', function () {
 //   counter = counter - 10;
+//   middleButton.innerText = counter;
 //   print(counter);
 // });
 // rightButton.addEventListener('click', function () {
 //   counter = counter + 10;
-//   print(counter);
+//   middleButton.innerText = counter;
 // });
 // middleButton.addEventListener('click', function () {
-//   middleButton.innerText = counter;
+//   print(counter);
 // });
