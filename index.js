@@ -20,7 +20,7 @@ let aNumber = 123.456;
 let anotherNumber = 987;
 
 let anArray = [10, 11, 12, 13, 14, 15];
-let colors = ['yellow', 'blue', 'green', 'pink', 'gray' ];
+let colors = ['yellow', 'blue', 'green', 'pink', 'gray'];
 let anotherArray = [100, 101, 102, 103];
 
 let aSong = {
@@ -153,14 +153,14 @@ print(typeof aNumber);
 // leftButton.addEventListener('click', function () {
 //   counter = counter - 15;
 //   middleButton.innerText = counter;
-//   print(counter);
 // });
 // rightButton.addEventListener('click', function () {
 //   counter = counter + 15;
 //   middleButton.innerText = counter;
 // });
 // middleButton.addEventListener('click', function () {
-//   middleButton.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+//   middleButton.style.backgroundColor =
+//     colors[Math.floor(Math.random() * colors.length)];
 //   middleButton.style.transform = `rotate(${counter}deg)`;
 //   print(counter);
 // });
