@@ -13,11 +13,13 @@ function print(s) {
 // Write Javascript code!
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-let aString = 'Hello and こんにちは';
-let anotherString = 'Test 2 3 4';
+let aString = "Multitasking – the art of doing twice as much as you should half as well as you could.";
+let anotherString = 'Hello and こんにちは';
 
 let aNumber = 123.456;
 let anotherNumber = 987;
+
+let aBoolean = true;
 
 let anArray = [10, 11, 12, 13, 14, 15];
 let colors = ['yellow', 'blue', 'green', 'pink', 'gray'];
@@ -55,11 +57,99 @@ let fourthSong = {
 // and
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
 
-// Types
-print(123);
-print(aNumber);
+// ----------------------------------------------------------------------------
 
-print(typeof aNumber);
+// Types
+
+print(123);
+// print(aNumber);
+// print(typeof aNumber);
+// print(aString);
+// print(typeof aString);
+// print(aBoolean);
+// print(typeof aBoolean);
+// print(anArray);
+// print(typeof anArray);
+// print(colors);
+// print(typeof colors);
+
+
+// ----------------------------------------------------------------------------
+// Define variables:
+// let myFirstVariable;
+
+// Define and initialize
+// let mySecondVariable = "Hello";
+// const myFirstConstant = 3.14;
+
+// Why no var? It moved declaration at the top of the function. Replace var with let to see the difference
+// function test() {
+//   print(betterDoNotUse);
+//   var betterDoNotUse = 1;
+//   print(betterDoNotUse);
+// }
+// test();
+
+
+// ----------------------------------------------------------------------------
+
+// Assigning
+// let n=10;
+// print(`n=${n}`);
+// n = n + 2;
+// print(`n=${n}`);
+
+// ----------------------------------------------------------------------------
+
+// Operators
+// +, -, *, /, %, **
+// n = n+3*(n-2);
+// print(`n=${n}`);
+// n = n % 10;
+// print(`n=${n}`);
+// n = n ** 4;
+// print(`n=${n}`);
+// ++n;
+// print(`n=${n}`);
+// --n;
+// print(`n=${n}`);
+// n--;
+// print(`n=${n}`);
+// n=5;
+// let n2 = ++n;
+// print(`n2=${n2}, n=${n}`);
+// n=5;
+// let n3 = n++;
+// print(`n3=${n3}, n=${n}`);
+
+// ----------------------------------------------------------------------------
+
+// Assignment operators
+
+// +=, -=, *=, /=
+// n=20;
+// let n4 = 10;
+// n4 += n;
+// print(`n4=${n4}`);
+
+// ----------------------------------------------------------------------------
+
+// Working with Strings
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+// length, charAt(), concat(), indexOf(), slice(), trim()
+
+
+// Excurse: regular expressions
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+// String methods with regular expressions: match(), split()
+
+
+// ----------------------------------------------------------------------------
+
+// Comparison operators, and if...else...
+// ===, !==, <, >, <=, >=
 
 // let N = 10;
 // if (aNumber > N) {
@@ -86,6 +176,19 @@ print(typeof aNumber);
 //   print("I like either apples or bananas");
 // }
 
+// ----------------------------------------------------------------------------
+
+// Comparing == and ===
+// === is false if the type is different
+/*
+a=0
+b=""
+a===b
+a==b
+*/
+
+// ----------------------------------------------------------------------------
+
 // Functions
 
 // function multiply(x, y) {
@@ -103,12 +206,15 @@ print(typeof aNumber);
 // See https://blog.bitsrc.io/arrow-functions-vs-regular-functions-in-javascript-458ccd863bc1
 // for the finer details how they differ from function definition
 
-// // const multiply = (x, y) => { return x*y; }
+// const multiply = (x, y) => { return x*y; }
 // const multiply = (x, y) => x*y;
 
 // print(multiply(6,7));
 
+// ----------------------------------------------------------------------------
+
 // Loops
+// for(;;), for..in.., for..of.., while, do..while, forEach
 
 // for (let i=1; i<=4; i=i+1) {
 //   print(i);
@@ -117,12 +223,16 @@ print(typeof aNumber);
 // for (let i=0; i<anArray.length; ++i) {
 //   print(`for loop: i=${i}, anArray[${i}]=${anArray[i]}`);
 // }
-// function display(v, i) {
-//   print(`v=${v}, i=${i}`);
+
+// for (let index in colors) {
+//   print(`index=${index}`);
 // }
-// anArray.forEach(display);
-// anArray.forEach((v, i) => {print(`v=${v}, i=${i}`);});
-// anArray.forEach((x) => {print(`x=${x}`);});
+// for (let color of colors) {
+//   print(`color=${color}`);
+// }
+// for (let [index, color] of Object.entries(colors)) {
+//   print(`index=${index}, color=${color}`);
+// }
 
 // let i=0;
 // while (i < anArray.length) {
@@ -135,6 +245,14 @@ print(typeof aNumber);
 //   print(`do..while: i=${i}, anArray[${i}]=${anArray[i]}`);
 //   ++i;
 // } while (i<anArray.length);
+
+// function display(v, i) {
+//   print(`v=${v}, i=${i}`);
+// }
+// anArray.forEach(display);
+// anArray.forEach((v, i) => {print(`v=${v}, i=${i}`);});
+// anArray.forEach((x) => {print(`x=${x}`);});
+
 
 // outputDiv.innerText += JSON.stringify(aSong, null, 4);
 // let listOfSongs = [aSong, anotherSong, thirdSong, fourthSong];
