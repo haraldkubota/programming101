@@ -1,9 +1,17 @@
 <div id="app"></div>
 
-<div>
+<div style="display: none" id="buttons">
   <span id="leftButton" class="button"></span>
   <span id="middleButton" class="button"></span>
   <span id="rightButton" class="button"></span>
+</div>
+
+<div style="display: none" id="gameArea">
+  <form onsubmit="return false;" id="form">
+    <div id="gameText" class="gameText">Guess a number between 1 and 100</div>
+    <input id="numberField" type="text" placeholder="Your guess" />
+    <input id="submit" type="submit" value="Send" />
+  </form>
 </div>
 
 <div id="output"></div>

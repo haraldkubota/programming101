@@ -13,7 +13,8 @@ function print(s) {
 // Write Javascript code!
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-let aString = "Multitasking – the art of doing twice as much as you should half as well as you could.";
+let aString =
+  'Multitasking – the art of doing twice as much as you should half as well as you could.';
 let anotherString = 'Hello and こんにちは';
 
 let aNumber = 123.456;
@@ -73,7 +74,6 @@ print(123);
 // print(colors);
 // print(typeof colors);
 
-
 // ----------------------------------------------------------------------------
 // Define variables:
 // let myFirstVariable;
@@ -89,7 +89,6 @@ print(123);
 //   print(betterDoNotUse);
 // }
 // test();
-
 
 // ----------------------------------------------------------------------------
 
@@ -139,12 +138,10 @@ print(123);
 
 // length, charAt(), concat(), indexOf(), slice(), trim()
 
-
 // Excurse: regular expressions
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 // String methods with regular expressions: match(), split()
-
 
 // ----------------------------------------------------------------------------
 
@@ -253,13 +250,15 @@ a==b
 // anArray.forEach((v, i) => {print(`v=${v}, i=${i}`);});
 // anArray.forEach((x) => {print(`x=${x}`);});
 
-
 // outputDiv.innerText += JSON.stringify(aSong, null, 4);
 // let listOfSongs = [aSong, anotherSong, thirdSong, fourthSong];
 // outputDiv.innerText += JSON.stringify(listOfSongs, null, 4);
 
+// ----------------------------------------------------------------------------
+
 // Button interactive (change counter)
 
+// document.getElementById('buttons').style.display="inline";
 // let counter = 0;
 // const leftButton = document.getElementById('leftButton');
 // const middleButton = document.getElementById('middleButton');
@@ -282,3 +281,31 @@ a==b
 //   middleButton.style.transform = `rotate(${counter}deg)`;
 //   print(counter);
 // });
+
+// ----------------------------------------------------------------------------
+
+// Number guessing game
+
+const myForm = document.getElementById('form');
+let targetNumber = Math.floor(Math.random() * 100) + 1;
+let guessCounter = 1;
+
+console.log(`The secret number is ${targetNumber}`);
+function validate() {
+  const guessedNumber = Number.parseInt(
+    document.getElementById('numberField').value
+  );
+  print(`Value is ${guessedNumber}`);
+  if (guessedNumber == targetNumber) {
+    print(`You found the secret number in ${guessCounter} tries!`);
+  } else {
+    ++guessCounter;
+    if (guessedNumber < targetNumber) {
+      print('Your guess is too low.');
+    } else {
+      print('Your guess is too high.');
+    }
+  }
+}
+myForm.addEventListener('submit', validate);
+document.getElementById('gameArea').style.display = 'inline';
