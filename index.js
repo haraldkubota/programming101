@@ -286,26 +286,26 @@ a==b
 
 // Number guessing game
 
-const myForm = document.getElementById('form');
-let targetNumber = Math.floor(Math.random() * 100) + 1;
-let guessCounter = 1;
+// const myForm = document.getElementById('form');
+// let targetNumber = Math.floor(Math.random() * 100) + 1;
+// let guessCounter = 1;
 
-console.log(`The secret number is ${targetNumber}`);
-function validate() {
-  const guessedNumber = Number.parseInt(
-    document.getElementById('numberField').value
-  );
-  print(`Value is ${guessedNumber}`);
-  if (guessedNumber == targetNumber) {
-    print(`You found the secret number in ${guessCounter} tries!`);
-  } else {
-    ++guessCounter;
-    if (guessedNumber < targetNumber) {
-      print('Your guess is too low.');
-    } else {
-      print('Your guess is too high.');
-    }
-  }
-}
-myForm.addEventListener('submit', validate);
-document.getElementById('gameArea').style.display = 'inline';
+// console.log(`The secret number is ${targetNumber}`);
+// function validate() {
+//   const guessedNumber = Number.parseInt(
+//     document.getElementById('numberField').value
+//   );
+//   print(`Value is ${guessedNumber}`);
+//   if (guessedNumber == targetNumber) {
+//     print(`You found the secret number in ${guessCounter} tries!`);
+//   } else {
+//     ++guessCounter;
+//     if (guessedNumber < targetNumber) {
+//       print('Your guess is too low.');
+//     } else {
+//       print('Your guess is too high.');
+//     }
+//   }
+// }
+// myForm.addEventListener('submit', validate);
+// document.getElementById('gameArea').style.display = 'inline';
