@@ -191,13 +191,17 @@ a==b
 // function multiply(x, y) {
 //   return x*y;
 // }
+// const multiply = function(x, y) {
+//   return x*y;
+// }
 // function divide(x, y) {
+//   if (y==0) return 0;
 //   return x/y;
 // }
 // print(multiply(6,7));
 // print(divide(10,3));
 // print(divide(5,0));
-// Modify divide() to return 0 in case of y is zero
+// Task: Modify divide() to return 0 in case of y is zero
 
 // Functions via =>
 // See https://blog.bitsrc.io/arrow-functions-vs-regular-functions-in-javascript-458ccd863bc1
@@ -211,7 +215,7 @@ a==b
 // ----------------------------------------------------------------------------
 
 // Loops
-// for(;;), for..in.., for..of.., while, do..while, forEach
+// for(;;), while, do..while, for..in.., for..of.., forEach
 
 // for (let i=1; i<=4; i=i+1) {
 //   print(i);
@@ -219,16 +223,6 @@ a==b
 // print(`anArray = [${anArray}]`);
 // for (let i=0; i<anArray.length; ++i) {
 //   print(`for loop: i=${i}, anArray[${i}]=${anArray[i]}`);
-// }
-
-// for (let index in colors) {
-//   print(`index=${index}`);
-// }
-// for (let color of colors) {
-//   print(`color=${color}`);
-// }
-// for (let [index, color] of Object.entries(colors)) {
-//   print(`index=${index}, color=${color}`);
 // }
 
 // let i=0;
@@ -242,6 +236,16 @@ a==b
 //   print(`do..while: i=${i}, anArray[${i}]=${anArray[i]}`);
 //   ++i;
 // } while (i<anArray.length);
+
+// for (let index in colors) {
+//   print(`index=${index}`);
+// }
+// for (let color of colors) {
+//   print(`color=${color}`);
+// }
+// for (let [index, color] of Object.entries(colors)) {
+//   print(`index=${index}, color=${color}`);
+// }
 
 // function display(v, i) {
 //   print(`v=${v}, i=${i}`);
