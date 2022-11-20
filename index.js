@@ -77,6 +77,8 @@ print('print() output arrives here');
 // // Function
 // print(typeof print);
 
+// // Task: What is the type of aSong?
+
 // ----------------------------------------------------------------------------
 
 // // Define variables
@@ -163,7 +165,7 @@ print('print() output arrives here');
 // Working with Strings
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
-// length, charAt(), concat(), indexOf(), slice(), trim()
+// length, charAt(), indexOf(), replace(), slice(), trim()
 
 // print(aString);
 // print(aString.length);
@@ -175,6 +177,7 @@ print('print() output arrives here');
 // print(aString.indexOf('a'));
 // // How to find the next 'a'?
 // print(aString.indexOf('a', 7));
+// print(aString.replace("twice", "two times"));
 // print(aString.slice(6,20));
 // print('"'+'  leading and trailing spaces     '+'"');
 // print('"'+'  leading and trailing spaces     '.trim()+'"');
@@ -235,6 +238,7 @@ a==b
 
 // Functions
 
+// // Named functions
 // function multiply(x, y) {
 //   return x*y;
 // }
@@ -250,14 +254,25 @@ a==b
 // // Task: Modify divide() to return 0 in case of y is zero
 // // Task: Create a function mulAdd() which returns the first argument multiplied with the next and add the value of the third one
 
-// Functions via =>
-// See https://blog.bitsrc.io/arrow-functions-vs-regular-functions-in-javascript-458ccd863bc1
-// for the finer details how they differ from function definition
-
+// // The following definitions of multiply() are all functionally identical
+// function multiply(x, y) {
+//   return x*y;
+// }
+// const multiply = function(x, y) {
+//   return x*y;
+// }
 // const multiply = (x, y) => { return x*y; }
 // const multiply = (x, y) => x*y;
 
 // print(multiply(6,7));
+
+// // Note that function definitions are "hoisted" so they can be used before they are defined
+// const myfun = () => { return "myfun works";}
+// print(myfun());
+// function myfun() {
+//   return "myfun the normal function";
+// }
+// const myfun = () => { return "myfun does not work";}
 
 // ----------------------------------------------------------------------------
 
@@ -273,9 +288,8 @@ a==b
 // }
 
 // // Task: Print multiples of 7 up to 100
-// // Task: Print colors in colors[] like this: color1, color2, ... colorLast-1 and colorLast.
-// // Hint: construct a string
-
+// // Task: Print colors in colors[] like this: "I like color1, color2, ... colorLast-1 and colorLast."
+// // Hint: construct a string and add colors, commas, periods and "and" as needed.
 
 // let i=0;
 // while (i < anArray.length) {
@@ -305,6 +319,8 @@ a==b
 //   print(`index=${index}, color=${color}`);
 // }
 
+// // forEach method
+
 // function display(v, i) {
 //   print(`v=${v}, i=${i}`);
 // }
@@ -316,6 +332,49 @@ a==b
 // outputDiv.innerText += JSON.stringify(aSong, null, 4)+"\n";;
 // let listOfSongs = [aSong, anotherSong, thirdSong, fourthSong];
 // outputDiv.innerText += "\n"+JSON.stringify(listOfSongs, null, 4);
+
+// ----------------------------------------------------------------------------
+
+// JSON: JavaScript Object Notation
+// Simply a String representation of a JavaScript Opject:
+// let car = {
+//   color: 'red',
+//   wheels: ['front left', 'front right', 'rear left', 'rear right'],
+//   buildYear: 2022,
+//   powerSource: {
+//     hasBattery: true,
+//     hasCombustionEngine: true,
+//   },
+//   model: 'カローラ',
+//   brand: 'Toyota',
+// };
+// print(car.color);
+// print(car.buildYear);
+// print(car.brand);
+// if (car.wheels.length === 4)
+//   print("It's a car with the normal amount of wheels");
+// else print("It's a car with an unusual amount of wheels");
+
+// car.isHybrid = true;
+// print(car);
+// // print(JSON.stringify(car, null, '  '));
+
+// // Task: Create a JSON structure with 5 city hall addresses
+// // Take them from https://tabunka.tokyo-tsunagari.or.jp/guide_eng/gov/01.html
+// // Print them all out like this (using Tama as an example):
+// // City Office Tama
+// // Sekido 6-12-1
+// // 206-8666 Tama-shi
+// // Tel: (042) 375-8111
+
+// ----------------------------------------------------------------------------
+
+// Task: Install Node.js, VSCode
+// NPM
+// Install javascripting: npm install -g javascripting
+// Run javascripting for review
+
+// ----------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------
 
