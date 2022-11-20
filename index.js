@@ -394,15 +394,15 @@ leftButton.innerText = '<<';
 rightButton.innerText = '>>';
 middleButton.innerText = counter;
 
-leftButton.addEventListener('click', function () {
+leftButton.addEventListener('click', () => {
   counter = counter - 15;
   middleButton.innerText = counter;
 });
-rightButton.addEventListener('click', function () {
+rightButton.addEventListener('click', () => {
   counter = counter + 15;
   middleButton.innerText = counter;
 });
-middleButton.addEventListener('click', function () {
+middleButton.addEventListener('click', () => {
   middleButton.style.backgroundColor =
     colors[Math.floor(Math.random() * colors.length)];
   middleButton.style.transform = `rotate(${counter}deg)`;
