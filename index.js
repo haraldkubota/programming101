@@ -62,7 +62,8 @@ let fourthSong = {
 
 // Types
 
-print(123);
+print('print() output arrives here');
+
 // print(aNumber);
 // print(typeof aNumber);
 // print(aString);
@@ -73,35 +74,59 @@ print(123);
 // print(typeof anArray);
 // print(colors);
 // print(typeof colors);
+// // Function
+// print(typeof print);
 
 // ----------------------------------------------------------------------------
-// Define variables:
-// let myFirstVariable;
 
-// Define and initialize
+// // Define variables
+// // Case sensitiv
+// let myFirstVariable;
+// let myfirstvariable;
+
+// // Define and initialize
 // let mySecondVariable = "Hello";
 // const myFirstConstant = 3.14;
+// // type can change:
+// print(typeof mySecondVariable);
+// mySecondVariable = false;
+// print(typeof mySecondVariable);
 
-// Why no var? It moved declaration at the top of the function. Replace var with let to see the difference
+// // Scope
+// // Why no var? It moves declaration at the top of the function. Replace var with let to see the difference
 // function test() {
 //   print(betterDoNotUse);
 //   var betterDoNotUse = 1;
 //   print(betterDoNotUse);
 // }
+// // function test() {
+// //   var betterDoNotUse;
+// //   print(betterDoNotUse);
+// //   betterDoNotUse = 1;
+// //   print(betterDoNotUse);
+// // }
 // test();
 
 // ----------------------------------------------------------------------------
 
-// Assigning
+// // Assigning values
+
+// // Excurse: Template Strings (AKA Template Literals): String Interpolation
+// // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
 // let n=10;
 // print(`n=${n}`);
 // n = n + 2;
 // print(`n=${n}`);
 
+// // Task: try const instead of let
+
 // ----------------------------------------------------------------------------
 
 // Operators
 // +, -, *, /, %, **
+
+// let n=10;
 // n = n+3*(n-2);
 // print(`n=${n}`);
 // n = n % 10;
@@ -114,10 +139,10 @@ print(123);
 // print(`n=${n}`);
 // n--;
 // print(`n=${n}`);
-// n=5;
+// n = 5;
 // let n2 = ++n;
 // print(`n2=${n2}, n=${n}`);
-// n=5;
+// n = 5;
 // let n3 = n++;
 // print(`n3=${n3}, n=${n}`);
 
@@ -126,8 +151,10 @@ print(123);
 // Assignment operators
 
 // +=, -=, *=, /=
-// n=20;
+
+// let n = 20;
 // let n4 = 10;
+// print(`n4=${n4}`);
 // n4 += n;
 // print(`n4=${n4}`);
 
@@ -138,10 +165,28 @@ print(123);
 
 // length, charAt(), concat(), indexOf(), slice(), trim()
 
-// Excurse: regular expressions
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+// print(aString);
+// print(aString.length);
+// print('14 char string'.length);
+// print(aString.charAt(0));
+// print(aString.charAt(1));
+// // See https://www.asciitable.com/
+// print(aString.charCodeAt(0));
+// print(aString.indexOf('a'));
+// // How to find the next 'a'?
+// print(aString.indexOf('a', 7));
+// print(aString.slice(6,20));
+// print('"'+'  leading and trailing spaces     '+'"');
+// print('"'+'  leading and trailing spaces     '.trim()+'"');
 
-// String methods with regular expressions: match(), split()
+// // Excurse: regular expressions
+// // See also https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+// // String methods with regular expressions: match(), split()
+// print(aString.split(/ /));
+// print(aString.match(/\w*ou\w*/));
+// let r=aString.matchAll(/\w*ou\w*/g);
+// for (let match of r) {print(match[0]+" "+match.index);}
 
 // ----------------------------------------------------------------------------
 
@@ -176,7 +221,9 @@ print(123);
 // ----------------------------------------------------------------------------
 
 // Comparing == and ===
+// == looks for falsy values: false, 0, "", []
 // === is false if the type is different
+// Run in the web browser console
 /*
 a=0
 b=""
@@ -195,13 +242,13 @@ a==b
 //   return x*y;
 // }
 // function divide(x, y) {
-//   if (y==0) return 0;
 //   return x/y;
 // }
 // print(multiply(6,7));
 // print(divide(10,3));
 // print(divide(5,0));
-// Task: Modify divide() to return 0 in case of y is zero
+// // Task: Modify divide() to return 0 in case of y is zero
+// // Task: Create a function mulAdd() which returns the first argument multiplied with the next and add the value of the third one
 
 // Functions via =>
 // See https://blog.bitsrc.io/arrow-functions-vs-regular-functions-in-javascript-458ccd863bc1
@@ -225,24 +272,35 @@ a==b
 //   print(`for loop: i=${i}, anArray[${i}]=${anArray[i]}`);
 // }
 
+// // Task: Print multiples of 7 up to 100
+// // Task: Print colors in colors[] like this: color1, color2, ... colorLast-1 and colorLast.
+// // Hint: construct a string
+
+
 // let i=0;
 // while (i < anArray.length) {
 //   print(`while: i=${i}, anArray[${i}]=${anArray[i]}`);
 //   ++i;
 // }
 
-// i=0
+// let i=0;
 // do {
 //   print(`do..while: i=${i}, anArray[${i}]=${anArray[i]}`);
 //   ++i;
 // } while (i<anArray.length);
 
+// When to use do..while.. or while..
+// do {
+//   print("Enter a number from 1 to 10");
+//   number = getANumber();
+// } while (number >= 1 && number <=10);
 // for (let index in colors) {
 //   print(`index=${index}`);
 // }
 // for (let color of colors) {
 //   print(`color=${color}`);
 // }
+// // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 // for (let [index, color] of Object.entries(colors)) {
 //   print(`index=${index}, color=${color}`);
 // }
@@ -251,12 +309,13 @@ a==b
 //   print(`v=${v}, i=${i}`);
 // }
 // anArray.forEach(display);
-// anArray.forEach((v, i) => {print(`v=${v}, i=${i}`);});
+// // Anonymous function:
+// anArray.forEach((v, i) => {print(`V=${v}, I=${i}`);});
 // anArray.forEach((x) => {print(`x=${x}`);});
 
-// outputDiv.innerText += JSON.stringify(aSong, null, 4);
+// outputDiv.innerText += JSON.stringify(aSong, null, 4)+"\n";;
 // let listOfSongs = [aSong, anotherSong, thirdSong, fourthSong];
-// outputDiv.innerText += JSON.stringify(listOfSongs, null, 4);
+// outputDiv.innerText += "\n"+JSON.stringify(listOfSongs, null, 4);
 
 // ----------------------------------------------------------------------------
 
