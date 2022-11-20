@@ -78,6 +78,8 @@ print('print() output arrives here');
 // print(typeof print);
 
 // // Task: What is the type of aSong?
+// // Task: What is the type of 123456789n
+
 
 // ----------------------------------------------------------------------------
 
@@ -122,6 +124,7 @@ print('print() output arrives here');
 // print(`n=${n}`);
 
 // // Task: try const instead of let
+// // Task: How much is 123, 0123, 0x123, 123n, 0b1111000
 
 // ----------------------------------------------------------------------------
 
@@ -355,9 +358,10 @@ a==b
 //   print("It's a car with the normal amount of wheels");
 // else print("It's a car with an unusual amount of wheels");
 
+// // Adding a new property:
 // car.isHybrid = true;
 // print(car);
-// // print(JSON.stringify(car, null, '  '));
+// print(JSON.stringify(car, null, '  '));
 
 // // Task: Create a JSON structure with 5 city hall addresses
 // // Take them from https://tabunka.tokyo-tsunagari.or.jp/guide_eng/gov/01.html
@@ -376,33 +380,34 @@ a==b
 
 // ----------------------------------------------------------------------------
 
+// More data structures: Class, Set
 // ----------------------------------------------------------------------------
 
 // Button interactive (change counter)
 
-// document.getElementById('buttons').style.display="inline";
-// let counter = 0;
-// const leftButton = document.getElementById('leftButton');
-// const middleButton = document.getElementById('middleButton');
-// const rightButton = document.getElementById('rightButton');
-// leftButton.innerText = '<<';
-// rightButton.innerText = '>>';
-// middleButton.innerText = counter;
+document.getElementById('buttons').style.display="inline";
+let counter = 0;
+const leftButton = document.getElementById('leftButton');
+const middleButton = document.getElementById('middleButton');
+const rightButton = document.getElementById('rightButton');
+leftButton.innerText = '<<';
+rightButton.innerText = '>>';
+middleButton.innerText = counter;
 
-// leftButton.addEventListener('click', function () {
-//   counter = counter - 15;
-//   middleButton.innerText = counter;
-// });
-// rightButton.addEventListener('click', function () {
-//   counter = counter + 15;
-//   middleButton.innerText = counter;
-// });
-// middleButton.addEventListener('click', function () {
-//   middleButton.style.backgroundColor =
-//     colors[Math.floor(Math.random() * colors.length)];
-//   middleButton.style.transform = `rotate(${counter}deg)`;
-//   print(counter);
-// });
+leftButton.addEventListener('click', function () {
+  counter = counter - 15;
+  middleButton.innerText = counter;
+});
+rightButton.addEventListener('click', function () {
+  counter = counter + 15;
+  middleButton.innerText = counter;
+});
+middleButton.addEventListener('click', function () {
+  middleButton.style.backgroundColor =
+    colors[Math.floor(Math.random() * colors.length)];
+  middleButton.style.transform = `rotate(${counter}deg)`;
+  print(counter);
+});
 
 // ----------------------------------------------------------------------------
 
