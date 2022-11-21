@@ -336,6 +336,19 @@ a==b
 // let listOfSongs = [aSong, anotherSong, thirdSong, fourthSong];
 // outputDiv.innerText += "\n"+JSON.stringify(listOfSongs, null, 4);
 
+
+// ----------------------------------------------------------------------------
+
+// More Control flow
+
+// Ternary Operator (:?)
+// switch case
+// break
+// continue
+// Comma Operator
+// Common use for , is
+// for (let i = 0, j = 1; i < board.length; i++, j++) {}
+
 // ----------------------------------------------------------------------------
 
 // JSON: JavaScript Object Notation
