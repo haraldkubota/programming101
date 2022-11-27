@@ -41,12 +41,6 @@ let anotherSong = {
   video: 'https://youtu.be/4Js-XbNj6Tk?t=37',
 };
 let thirdSong = {
-  title: 'Lone Digger',
-  releaseYear: 2015,
-  artist: 'Caravan Palace',
-  video: 'https://www.youtube.com/watch?v=UbQgXeY_zi4',
-};
-let fourthSong = {
   title: "Can't touch this",
   artist: 'MC Hammer',
   video: 'https://www.youtube.com/watch?v=otCpCn0l4Wo&t=15s',
