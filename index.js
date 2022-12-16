@@ -317,6 +317,16 @@ a==b
 //   print(`index=${index}, color=${color}`);
 // }
 
+// Nested loops
+// for (let x=0; x<10; ++x) {
+//   let s=`x=${x}: `;
+//   for (let y=0; y<10; ++y) {
+//     if (x*y<10) s+=" ";
+//     s+=`${x*y} `;
+//   }
+//   print(s);
+// }
+
 // // forEach method
 
 // function display(v, i) {
