@@ -146,11 +146,14 @@ print('print() output arrives here');
 // let n3 = n++;
 // print(`n3=${n3}, n=${n}`);
 
+// // HOMEWORK
+// // How to calculate the square root of 2? Or sin(0.1)?
+
 // ----------------------------------------------------------------------------
 
 // Assignment operators
 
-// +=, -=, *=, /=
+// +=, -=, *=, /=, %=, &=, |= etc.
 
 // let n = 20;
 // let n4 = 10;
@@ -158,12 +161,23 @@ print('print() output arrives here');
 // n4 += n;
 // print(`n4=${n4}`);
 
+// // HOMEWORK
+// // Rewrite with the shorter assignment operators:
+// // a=a+b
+// // a=c*a
+// // a=a/2
+// // a=1/a
+// // a=a-1
+// // a=2-a
+// // What does this output? And how does it work?
+// // let a=255; a &= 0x0F
+
 // ----------------------------------------------------------------------------
 
 // Working with Strings
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
-// length, charAt(), indexOf(), replace(), slice(), trim()
+// length, charAt(), indexOf(), replace(), replaceAll(), slice(), trim()
 
 // print(aString);
 // print(aString.length);
@@ -188,6 +202,16 @@ print('print() output arrives here');
 // print(aString.match(/\w*ou\w*/));
 // let r=aString.matchAll(/\w*ou\w*/g);
 // for (let match of r) {print(match[0]+" "+match.index);}
+
+// // HOMEWORK
+// // Take the string " This is a very long test string which has plenty characters to play with "
+// // Remove the leading and training space
+// // Replace the first "a" with "one"
+// // Take the slice from character 40 to 59 (inclusive 59)
+// // Replace all "r" with "R"
+// // Take the last 3 characters
+// // Add up their character codes
+// // The number should be 299
 
 // ----------------------------------------------------------------------------
 
@@ -218,6 +242,9 @@ print('print() output arrives here');
 // if (iLikeApples !== iLikeBananas) {
 //   print("I like either apples or bananas");
 // }
+
+// // HOMEWORK
+// // Have a number in the variable a and print "${a} is even" when a is even and "${a} is odd" when it's odd
 
 // ----------------------------------------------------------------------------
 
@@ -272,6 +299,12 @@ a==b
 // }
 // const myfun = () => { return "myfun does not work";}
 
+// // HOMEWORK
+// // Create a function which gets a number as an argument and it returns a string
+// // whether the argument is negative, even or odd
+// // Create a function which prints out the correct answer for
+// // https://en.wikipedia.org/wiki/Fizz_buzz for a given number
+
 // ----------------------------------------------------------------------------
 
 // Loops
@@ -285,6 +318,7 @@ a==b
 //   print(`for loop: i=${i}, anArray[${i}]=${anArray[i]}`);
 // }
 
+// // HOMEWORK
 // // Task: Print multiples of 7 up to 100
 // // Task: Print colors in colors[] like this: "I like color1, color2, ... colorLast-1 and colorLast."
 // // Hint: construct a string and add colors, commas, periods and "and" as needed.
