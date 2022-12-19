@@ -75,7 +75,6 @@ print('print() output arrives here');
 // // Task: What is the type of aSong?
 // // Task: What is the type of 123456789n
 
-
 // ----------------------------------------------------------------------------
 
 // // Define variables
@@ -307,6 +306,50 @@ a==b
 
 // ----------------------------------------------------------------------------
 
+// Arrays/Lists, push(), pop(), shift(), slice()
+
+let myEmptyArray = [];
+let arr1 = [10, 11, 12];
+let arr2 = [10, 11, 12];
+if (arr1 === arr2) {
+  print('arr1 and arr2 are equal');
+} else {
+  print('arr1 and arr2 are not equal');
+}
+let arr3 = arr1;
+if (arr1 === arr3) {
+  print('arr1 and arr3 are equal');
+} else {
+  print('arr1 and arr3 are not equal');
+}
+// see https://notionalmachines.github.io/nms/StackAndHeapDiagram-4.html
+
+let arr4 = Array(10);
+print(arr4);
+arr4.push(1);
+print(arr4);
+arr4[1] = 2;
+print(arr4);
+arr4.fill(3);
+print(arr4);
+// let arr5=arr4.map((v,i) => i+10);
+// Same as:
+let arr5 = [];
+for (let i = 0; i < arr4.length; ++i) arr5[i] = i + 10;
+print(arr5);
+let b = arr5.pop();
+// What values do b and c have?
+print(`b=${b}`);
+let c = arr5.shift();
+print(`c=${c}`);
+print(arr5);
+arr5.push(21);
+print(arr5);
+arr5.unshift(22);
+print(arr5);
+
+// ----------------------------------------------------------------------------
+
 // Loops
 // for(;;), while, do..while, for..in.., for..of.., forEach
 
@@ -319,8 +362,8 @@ a==b
 // }
 
 // // HOMEWORK
-// // Task: Print multiples of 7 up to 100
-// // Task: Print colors in colors[] like this: "I like color1, color2, ... colorLast-1 and colorLast."
+// // Print multiples of 7 up to 100
+// // Print colors in colors[] like this: "I like color1, color2, ... colorLast-1 and colorLast."
 // // Hint: construct a string and add colors, commas, periods and "and" as needed.
 
 // let i=0;
@@ -375,12 +418,30 @@ a==b
 // let listOfSongs = [aSong, anotherSong, thirdSong, fourthSong];
 // outputDiv.innerText += "\n"+JSON.stringify(listOfSongs, null, 4);
 
+// // HOMEWORK
+// // Create an array of numbers from 0 to 99
+// // Using forEach(), sum up all numbers (result should be 4950) and print it
+// //
+// // Create an array with 10 entries, populate with random numbers from 1 to 9
+// // Math.floor(Math.random()*9.0)+1 returns a random number from 1 to 9
+// // Create another array which has the first array reversed
+// // Print both arrays
 
+// ----------------------------------------------------------------------------
 // ----------------------------------------------------------------------------
 
 // More Control flow
 
 // Ternary Operator (:?)
+
+// print((2 > 1) ? "Yes" : "No");
+// // Short for
+// if (2 > 1) {
+//   print("Yes");
+// } else {
+//   print("No");
+// }
+
 // switch case
 // break
 // continue
@@ -437,7 +498,7 @@ a==b
 
 // Button interactive (change counter)
 
-document.getElementById('buttons').style.display="inline";
+document.getElementById('buttons').style.display = 'inline';
 let counter = 0;
 const leftButton = document.getElementById('leftButton');
 const middleButton = document.getElementById('middleButton');
