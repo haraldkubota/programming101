@@ -55,6 +55,17 @@ let thirdSong = {
 
 // ----------------------------------------------------------------------------
 
+// A comment, anything after // will be ignored
+/*
+This is a comment
+too which can cover more lines
+*/
+
+/* This works too */
+// But not this: /* Comment /* with more comments */ */
+
+// ----------------------------------------------------------------------------
+
 // Types
 
 print('print() output arrives here');
@@ -308,45 +319,47 @@ a==b
 
 // Arrays/Lists, push(), pop(), shift(), slice()
 
-let myEmptyArray = [];
-let arr1 = [10, 11, 12];
-let arr2 = [10, 11, 12];
-if (arr1 === arr2) {
-  print('arr1 and arr2 are equal');
-} else {
-  print('arr1 and arr2 are not equal');
-}
-let arr3 = arr1;
-if (arr1 === arr3) {
-  print('arr1 and arr3 are equal');
-} else {
-  print('arr1 and arr3 are not equal');
-}
-// see https://notionalmachines.github.io/nms/StackAndHeapDiagram-4.html
+// let myEmptyArray = [];
+// let arr1 = [10, 11, 12];
+// let arr2 = [10, 11, 12];
+// if (arr1 === arr2) {
+//   print('arr1 and arr2 are equal');
+// } else {
+//   print('arr1 and arr2 are not equal');
+// }
+// let arr3 = arr1;
+// if (arr1 === arr3) {
+//   print('arr1 and arr3 are equal');
+// } else {
+//   print('arr1 and arr3 are not equal');
+// }
 
-let arr4 = Array(10);
-print(arr4);
-arr4.push(1);
-print(arr4);
-arr4[1] = 2;
-print(arr4);
-arr4.fill(3);
-print(arr4);
-// let arr5=arr4.map((v,i) => i+10);
-// Same as:
-let arr5 = [];
-for (let i = 0; i < arr4.length; ++i) arr5[i] = i + 10;
-print(arr5);
-let b = arr5.pop();
-// What values do b and c have?
-print(`b=${b}`);
-let c = arr5.shift();
-print(`c=${c}`);
-print(arr5);
-arr5.push(21);
-print(arr5);
-arr5.unshift(22);
-print(arr5);
+// // see https://notionalmachines.github.io/nms/StackAndHeapDiagram-4.html
+// // or https://www.javascripttutorial.net/javascript-pass-by-value/
+
+// let arr4 = Array(10);
+// print(arr4);
+// arr4.push(1);
+// print(arr4);
+// arr4[1] = 2;
+// print(arr4);
+// arr4.fill(3);
+// print(arr4);
+// // let arr5=arr4.map((v,i) => i+10);
+// // Same as:
+// let arr5 = [];
+// for (let i = 0; i < arr4.length; ++i) arr5[i] = i + 10;
+// print(arr5);
+// let b = arr5.pop();
+// // What values do b and c have?
+// print(`b=${b}`);
+// let c = arr5.shift();
+// print(`c=${c}`);
+// print(arr5);
+// arr5.push(21);
+// print(arr5);
+// arr5.unshift(22);
+// print(arr5);
 
 // ----------------------------------------------------------------------------
 
