@@ -91,6 +91,11 @@ print('print() output arrives here');
 
 // // Define variables
 // // Case sensitiv
+// // use camelCase (AKA lower camelCase, or dromedaCase)
+// // Pascal uses Pascalcase (AKA upper camel case)
+// // Python usually uses snake_case
+// // Be idiomatic and use the "normal" convention.
+
 // let myFirstVariable;
 // let myfirstvariable;
 
@@ -102,17 +107,21 @@ print('print() output arrives here');
 // mySecondVariable = false;
 // print(typeof mySecondVariable);
 
-// // Scope: let and const: block scope
+// // Scope: let and const: block scope. var: function scope.
+
 // // Why no var? It moves declaration at the top of the function. Replace var with let to see the difference
+// // See also https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
+
+// test();
 
 // function test() {
 //   print(betterDoNotUse);
-//   var betterDoNotUse = 1;
+//   var betterDoNotUse = 1;  // Declaration hoisting happening here!
 //   print(betterDoNotUse);
 // }
 // // Identical to:
 // function test() {
-//   var betterDoNotUse;
+//   var betterDoNotUse;      // Declaration is hoisted
 //   print(betterDoNotUse);
 //   betterDoNotUse = 1;
 //   print(betterDoNotUse);
@@ -124,7 +133,17 @@ print('print() output arrives here');
 //   betterDoNotUse = 1;
 //   print(betterDoNotUse);
 // }
-// test();
+
+// Note that the functions are hoisted before they are being used by test();
+
+// Using const instead of let. Primitives work as you'd expect:
+// const a=10;
+// print(a);
+// // error when I try a=20;
+
+// TL;DR: do variable declarations inside a block at its very top.
+// Do not use var, use let or const instead.
+// Use const if possible to avoid accidental changes.
 
 // ----------------------------------------------------------------------------
 
@@ -134,7 +153,7 @@ print('print() output arrives here');
 // // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 // // and https://en.wikipedia.org/wiki/String_interpolation 
 
-// let n=10;
+// let n = 10;
 // print(`n=${n}`);
 // n = n + 2;
 // print(`n=${n}`);
@@ -147,8 +166,8 @@ print('print() output arrives here');
 // Operators
 // +, -, *, /, %, **
 
-// let n=10;
-// n = n+3*(n-2);
+// let n = 10;
+// n = n + 3 * (n - 2);
 // print(`n=${n}`);
 // n = n % 10;
 // print(`n=${n}`);
@@ -167,8 +186,8 @@ print('print() output arrives here');
 // let n3 = n++;
 // print(`n3=${n3}, n=${n}`);
 
-// // HOMEWORK
-// // How to calculate the square root of 2? Or sin(0.1)?
+// More mathematical operations are possible via the Math global object
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
 // ----------------------------------------------------------------------------
 
@@ -182,31 +201,21 @@ print('print() output arrives here');
 // n4 += n;
 // print(`n4=${n4}`);
 
-// // HOMEWORK
-// // Rewrite with the shorter assignment operators:
-// // a=a+b
-// // a=c*a
-// // a=a/2
-// // a=1/a
-// // a=a-1
-// // a=2-a
-// // What does this output? And how does it work?
-// // let a=255; a &= 0x0F
-
 // ----------------------------------------------------------------------------
 
 // Working with Strings
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
-// length, charAt(), indexOf(), replace(), replaceAll(), slice(), trim()
+// length, charAt(), charCodeAt(), indexOf(), replace(), replaceAll(), slice(), trim()
 
 // print(aString);
 // print(aString.length);
 // print('14 char string'.length);
 // print(aString.charAt(0));
 // print(aString.charAt(1));
+// print(aString.charCodeAt(1));
 // // See https://www.asciitable.com/
-// print(aString.charCodeAt(0));
+// // Find the first 'a'
 // print(aString.indexOf('a'));
 // // How to find the next 'a'?
 // print(aString.indexOf('a', 7));
@@ -214,6 +223,9 @@ print('print() output arrives here');
 // print(aString.slice(6,20));
 // print('"'+'  leading and trailing spaces     '+'"');
 // print('"'+'  leading and trailing spaces     '.trim()+'"');
+// How to handle ' and " in strings:
+// print('Double quote:" Single quote:\' Backslash:\\');
+// print("Double quote:\" Single quote:' Backslash:\\");
 
 // // Excurse: regular expressions
 // // See also https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
@@ -222,22 +234,14 @@ print('print() output arrives here');
 // print(aString.split(/ /));
 // print(aString.match(/\w*ou\w*/));
 // let r=aString.matchAll(/\w*ou\w*/g);
-// for (let match of r) {print(match[0]+" "+match.index);}
+// for (let match of r) {print(match[0]+" at index "+match.index);}
 
-// // HOMEWORK
-// // Take the string " This is a very long test string which has plenty characters to play with "
-// // Remove the leading and training space
-// // Replace the first "a" with "one"
-// // Take the slice from character 40 to 59 (inclusive 59)
-// // Replace all "r" with "R"
-// // Take the last 3 characters
-// // Add up their character codes
-// // The number should be 299
+
 
 // ----------------------------------------------------------------------------
 
 // Comparison operators, and if...else...
-// ===, !==, <, >, <=, >=
+// ===, !==, <, >, <=, >=, !, && and ||
 
 // let N = 10;
 // if (aNumber > N) {
@@ -249,8 +253,8 @@ print('print() output arrives here');
 //   print(`${aNumber} is not strictly equal to ${N}`);
 // }
 
-// let iLikeApples=true;
-// let iLikeBananas=false;
+// let iLikeApples = true;
+// let iLikeBananas = false;
 // if (iLikeApples === true) {
 //   print("I really like apples!");
 // }
@@ -264,8 +268,11 @@ print('print() output arrives here');
 //   print("I like either apples or bananas");
 // }
 
-// // HOMEWORK
-// // Have a number in the variable a and print "${a} is even" when a is even and "${a} is odd" when it's odd
+// // ! is the not operator: it flips true to false and false to true
+// // Thus those 2 are equivalent:
+let a=4; let b=5;
+if (a === b) print("a is equal to b");
+
 
 // ----------------------------------------------------------------------------
 
@@ -377,6 +384,14 @@ a==b
 // print(arr5);
 // arr5.unshift(22);
 // print(arr5);
+
+
+// Behavior of const on arrays:
+// const a=[10,20,30];
+// print(a);
+// a.push(40);
+// print(a);
+// // Error when I try a=[10,20];
 
 // ----------------------------------------------------------------------------
 
@@ -505,6 +520,13 @@ a==b
 // car.isHybrid = true;
 // print(car);
 // print(JSON.stringify(car, null, '  '));
+
+// Behavior of const on objects:
+// const b={};
+// print(JSON.stringify(b));
+// b.flag=true;
+// print(JSON.stringify(b));
+// // Error when I try b={test: 1};
 
 // // Task: Create a JSON structure with 5 city hall addresses
 // // Take them from https://tabunka.tokyo-tsunagari.or.jp/guide_eng/gov/01.html
