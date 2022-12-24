@@ -269,15 +269,23 @@ print('print() output arrives here');
 // }
 
 // // ! is the not operator: it flips true to false and false to true
+// // Operator priorities: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
+
 // // Thus those 2 are equivalent:
-let a=4; let b=5;
-if (a === b) print("a is equal to b");
+// let a = 4; let b = 2+2;
+// if (a === b) print("a is equal to b");
+// if (!(a !== b)) print("a is not different from b");
+// print("changing b to 5");
+// b = 5;
+// if (a < b) print("a is less than b");
+// if (! (a > b)) print ("a is not larger than b");
+// if (!!! (a > b)) print ("a is not not not larger than b");
 
 
 // ----------------------------------------------------------------------------
 
 // Comparing == and ===
-// == looks for falsy values: false, 0, "", []
+// == looks for falsy values: false, 0, "", [] (see https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 // === is false if the type is different
 // See https://developer.mozilla.org/en-US/docs/Glossary/Falsy
 
@@ -288,10 +296,6 @@ b=""
 a===b
 a==b
 */
-
-// // Task
-// // What is the result for the number 0 and the BigInt 0? What is 0 === 0n? What is 0 == 0n?
-
 
 // ----------------------------------------------------------------------------
 
@@ -310,8 +314,7 @@ a==b
 // print(multiply(6,7));
 // print(divide(10,3));
 // print(divide(5,0));
-// // Task: Modify divide() to return 0 in case of y is zero
-// // Task: Create a function mulAdd() which returns the first argument multiplied with the next and add the value of the third one
+
 
 // // The following definitions of multiply() are all functionally identical
 // function multiply(x, y) {
