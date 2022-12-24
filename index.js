@@ -84,7 +84,8 @@ print('print() output arrives here');
 // print(typeof print);
 
 // // Task: What is the type of aSong?
-// // Task: What is the type of 123456789n
+// // Task: What is the type of 123456789n?
+// // Task: What is the type of 0x10 and 'c' and "c"?
 
 // ----------------------------------------------------------------------------
 
@@ -101,19 +102,28 @@ print('print() output arrives here');
 // mySecondVariable = false;
 // print(typeof mySecondVariable);
 
-// // Scope
+// // Scope: let and const: block scope
 // // Why no var? It moves declaration at the top of the function. Replace var with let to see the difference
+
 // function test() {
 //   print(betterDoNotUse);
 //   var betterDoNotUse = 1;
 //   print(betterDoNotUse);
 // }
-// // function test() {
-// //   var betterDoNotUse;
-// //   print(betterDoNotUse);
-// //   betterDoNotUse = 1;
-// //   print(betterDoNotUse);
-// // }
+// // Identical to:
+// function test() {
+//   var betterDoNotUse;
+//   print(betterDoNotUse);
+//   betterDoNotUse = 1;
+//   print(betterDoNotUse);
+// }
+// // Better:
+// function test() {
+//   let betterNotUse;
+//   print(betterDoNotUse);
+//   betterDoNotUse = 1;
+//   print(betterDoNotUse);
+// }
 // test();
 
 // ----------------------------------------------------------------------------
@@ -122,6 +132,7 @@ print('print() output arrives here');
 
 // // Excurse: Template Strings (AKA Template Literals): String Interpolation
 // // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+// // and https://en.wikipedia.org/wiki/String_interpolation 
 
 // let n=10;
 // print(`n=${n}`);
@@ -261,6 +272,8 @@ print('print() output arrives here');
 // Comparing == and ===
 // == looks for falsy values: false, 0, "", []
 // === is false if the type is different
+// See https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+
 // Run in the web browser console
 /*
 a=0
@@ -268,6 +281,10 @@ b=""
 a===b
 a==b
 */
+
+// // Task
+// // What is the result for the number 0 and the BigInt 0? What is 0 === 0n? What is 0 == 0n?
+
 
 // ----------------------------------------------------------------------------
 
