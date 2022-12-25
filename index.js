@@ -364,6 +364,12 @@ a==b
 // // see https://notionalmachines.github.io/nms/StackAndHeapDiagram-4.html
 // // or https://www.javascripttutorial.net/javascript-pass-by-value/
 
+// // Where are the objects?
+// // Primitives (number, string, boolean) are on the stack
+// // Objects (functions, objects) are on the heap
+// // See https://felixgerschau.com/javascript-memory-management/
+
+
 // let arr4 = Array(10);
 // print(arr4);
 // arr4.push(1);
@@ -396,6 +402,7 @@ a==b
 // print(a);
 // // Error when I try a=[10,20];
 
+
 // ----------------------------------------------------------------------------
 
 // Loops
@@ -426,7 +433,7 @@ a==b
 //   ++i;
 // } while (i<anArray.length);
 
-// When to use do..while.. or while..
+// // When to use do..while.. or while..
 // do {
 //   print("Enter a number from 1 to 10");
 //   number = getANumber();
@@ -442,7 +449,7 @@ a==b
 //   print(`index=${index}, color=${color}`);
 // }
 
-// Nested loops
+// // Nested loops
 // for (let x=0; x<10; ++x) {
 //   let s=`x=${x}: `;
 //   for (let y=0; y<10; ++y) {
@@ -451,6 +458,14 @@ a==b
 //   }
 //   print(s);
 // }
+
+// // Breaking out of a loop
+for (let i=0; i<1_000_000; ++i) {
+  print(i);
+  if (i > 5) {
+    break;
+  }
+}
 
 // // forEach method
 
@@ -466,14 +481,7 @@ a==b
 // let listOfSongs = [aSong, anotherSong, thirdSong, fourthSong];
 // outputDiv.innerText += "\n"+JSON.stringify(listOfSongs, null, 4);
 
-// // HOMEWORK
-// // Create an array of numbers from 0 to 99
-// // Using forEach(), sum up all numbers (result should be 4950) and print it
-// //
-// // Create an array with 10 entries, populate with random numbers from 1 to 9
-// // Math.floor(Math.random()*9.0)+1 returns a random number from 1 to 9
-// // Create another array which has the first array reversed
-// // Print both arrays
+
 
 // ----------------------------------------------------------------------------
 // ----------------------------------------------------------------------------

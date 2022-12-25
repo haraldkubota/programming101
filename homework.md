@@ -83,7 +83,8 @@ You would like create a new variable which contains first string variable, a spa
 # Functions
 
 * Create a function evenOrOdd() with a argument. If it's even, return "even". If it's odd, return "odd".
-* Create a function add() to add up 2 numbers which are supplied as arguments. 
+* Create a function which returns true if the argument is between 50 and 99 (inclusive)
+* Create a function add() to add up 2 numbers which are supplied as arguments.
   * test: add(4,5) return 9, add(-5,-7) returns -12
   * What does add(3, "x") return?
 * Now adjust the function: if any of those argument is not a number type, return NaN
@@ -110,6 +111,64 @@ You would like create a new variable which contains first string variable, a spa
 * What is the length of a now?
 * How do you move the last item to the front?
 * How do you move the first item to the end?
+
+## Memory
+
+* Let a be an array of 1000 number. After executing let b = a; how many times are those 1000 numbers in memory? Stack or heap?
+* Two-dimensional lists are created by adding lists to lists, e.g. like this:
+  * let a=[11,12,13,14]; let c=[a,a,a];
+  * How many times is 11 in memory?
+  * Print out c
+  * c[2]=[9,8];
+  * Print out c. What changed?
+  * a[0]=20;
+  * Print out c. What changed? Why?
+* Create a 3x3 2-dimensional array where you can change any value without impacting any other one (you can use "new Array(SIZE).fill(0)")
+
+## 2D Arrays
+
+  * The elements are organized by rows: if arr is a 2D array, arr[0] is the first row, a[1] the second row etc. arr[0][0] is the first (leftmost) element in the first row.
+* Change the left element in the first row to 1
+* Change the middle element in the 2nd row tp 2
+* Change the last element in the last row to 3
+* If the were many rows, how can you access the last row?
+* How do you access the last element in the last row if the sizes are dynamic (not known in advance)?
+
+# Loops
+
+## for(;;)
+
+* Create a for loop from 0 to 9 and print out the counter
+* Create a for loop from 1 to 10 and print out the counter
+* Create a for loop counting from 9 to 0 backwards
+* What's the sum of all numbers from 0 to 100 (inclusive)?
+* What's the sum of all even numbers from 0 to 100 (inclusive)?
+* Fill an array of 10 entries with 100+2*index, so the first one gets the value of 100, the next one 102, then 104 etc. and print the array
+* print out a multiplication table from 1 to 10. Make it look nice so they form a nice grid.
+* Math.floor(Math.random()*9.0)+1 returns a random number from 1 to 9. With this, fill an array of 20 entries with a random number from 1 to 9.
+* Reverse the array. Print both.
+
+## do..while
+
+* Get a random number (Math.random()). If the number is not between 0.1 and 0.2, get another random number. Count how many times you had to get a random number.
+
+## while
+
+* Repeat the sum of all numbers from 0 to 100 from the for-loop, but now with a while loop
+* Repeat the random number example from the do..while section
+
+## for..in
+
+* colors is an array of color names. Use a for...in loop to print the color names out. What is a good name for the loop counter variable?
+
+## for..of
+
+* colors is an array of color names. Use a for...of loop to print the color names out. How is it different from for..in? What is a good name for the loop counter variable?
+
+## forEach()
+* Using forEach(), sum up all numbers from 0 to 99 (result should be 4950) and print it. You need an array for forEach() to work on.
+
+
 
 
 
