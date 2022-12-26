@@ -201,6 +201,12 @@ print('print() output arrives here');
 // n4 += n;
 // print(`n4=${n4}`);
 
+// Bit operations
+// let n1 = 0xf0f0;
+// let n2 = 255;  // = 0x00ff
+// n1 &= n2;
+// print(`n1=${n1} (=0x${n1.toString(16)})`);
+
 // ----------------------------------------------------------------------------
 
 // Working with Strings
