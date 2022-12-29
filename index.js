@@ -630,3 +630,32 @@ middleButton.addEventListener('click', () => {
 // }
 // myForm.addEventListener('submit', validate);
 // document.getElementById('gameArea').style.display = 'inline';
+
+// ----------------------------------------------------------------------------
+// DSA, but this better be not in a web page
+// ----------------------------------------------------------------------------
+
+
+// function benchmark(f, n) {
+//   let startTime = performance.now();
+//   for (let i = 0; i < n; ++i) {
+//     f();
+//   }
+//   let endTime = performance.now();
+//   print(`Elapsed time for ${n} iterations: ${endTime - startTime}ms`);
+// }
+
+// function arrayIndexOf(arr, value) {
+//   for (let i = 0; i < arr.length; ++i) {
+//     if (arr[i] === value) return i;
+//   }
+//   return -1;
+// }
+
+// let a = new Array(10000).fill(0);
+// a[9999] = 10;
+
+// benchmark(()=>{let t=1;}, 10_000_000);
+// benchmark(() => {
+//   arrayIndexOf(a, 10);
+// }, 100_000);
