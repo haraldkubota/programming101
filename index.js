@@ -186,6 +186,10 @@ print('print() output arrives here');
 // let n3 = n++;
 // print(`n3=${n3}, n=${n}`);
 
+// Why ++ and -- ?
+// PDP-11 (1970) had this in its instruction set at CPU level
+// Removes the need for a separate v=v+1 resp v=v-1 instructions
+
 // More mathematical operations are possible via the Math global object
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
@@ -194,6 +198,7 @@ print('print() output arrives here');
 // Assignment operators
 
 // +=, -=, *=, /=, %=, &=, |= etc.
+// Short for v=v+x, v=v-x etc.
 
 // let n = 20;
 // let n4 = 10;
