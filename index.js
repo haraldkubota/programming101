@@ -254,17 +254,17 @@ print('print() output arrives here');
 
 // ----------------------------------------------------------------------------
 
-// Control Flow
+// Flow Control
 
 // ----------------------------------------------------------------------------
 
 // Comparison operators, and if...else...
 // ===, !==, <, >, <=, >=, !, && and ||
 
-let N = 10;
-if (aNumber > N) {
-  print(`${aNumber} is greater than ${N}`);
-}
+// let N = 123.456;
+// if (aNumber > N) {
+//   print(`${aNumber} is greater than ${N}`);
+// }
 // if (aNumber === N) {
 //   print(`${aNumber} is strictly equal to ${N}`);
 // } else {
@@ -355,13 +355,22 @@ a==b
 // const myfun = () => { return "myfun does not work";}
 
 // // HOMEWORK
-// // Create a function which gets a number as an argument and it returns a string
-// // whether the argument is negative, even or odd
-// // Create a function which prints out the correct answer for
-// // https://en.wikipedia.org/wiki/Fizz_buzz for a given number
+// // Create a function which gets a number as an argument and it returns it as a string, except
+// // when it's 0, then return the string "zero"
+
+// function stringANumber(n) {
+//   if (n==0) {
+//     return "zero";
+//   } else {
+//     return n.toString(); // or: ""+n
+//   }
+// }
+
+// print(stringANumber(""));
 
 // ----------------------------------------------------------------------------
-
+//
+// One simple data structure needed a lot
 // Arrays/Lists, push(), pop(), shift(), slice()
 
 // let myEmptyArray = [];
@@ -382,10 +391,10 @@ a==b
 // // see https://notionalmachines.github.io/nms/StackAndHeapDiagram-4.html
 // // or https://www.javascripttutorial.net/javascript-pass-by-value/
 
-// // Where are the objects?
-// // Primitives (number, string, boolean) are on the stack
-// // Objects (functions, objects) are on the heap
-// // See https://felixgerschau.com/javascript-memory-management/
+// Where are the objects?
+// Primitives (number, string, boolean) are on the stack
+// Objects (functions, objects) are on the heap
+// See https://felixgerschau.com/javascript-memory-management/
 
 
 // let arr4 = Array(10);
@@ -397,13 +406,14 @@ a==b
 // arr4.fill(3);
 // print(arr4);
 // // let arr5=arr4.map((v,i) => i+10);
-// // Same as:
+// // // Same as:
 // let arr5 = [];
 // for (let i = 0; i < arr4.length; ++i) arr5[i] = i + 10;
 // print(arr5);
 // let b = arr5.pop();
 // // What values do b and c have?
 // print(`b=${b}`);
+// print(arr5);
 // let c = arr5.shift();
 // print(`c=${c}`);
 // print(arr5);
@@ -478,12 +488,25 @@ a==b
 // }
 
 // // Breaking out of a loop
-// for (let i=0; i<1_000_000; ++i) {
+// for (let i=0; i<10; ++i) {
 //   print(i);
 //   if (i > 5) {
 //     break;
 //   }
+//   // print(i); // What is the output if I use print(i) here?
 // }
+// print("Finished the loop");
+
+// // Continuing a loop (skip to its end)
+// for (let i=0; i<10; ++i) {
+//   // print(i);  // What is the output if I use print(i) here?
+//   if (i>4) {
+//     continue;
+//   }
+//   print(i);
+// } 
+// print("Finished the loop");
+
 
 // // forEach method
 
@@ -517,8 +540,7 @@ a==b
 // }
 
 // switch case
-// break
-// continue
+
 // Comma Operator
 // Common use for , is
 // for (let i = 0, j = 1; i < board.length; i++, j++) {}
