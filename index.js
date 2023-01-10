@@ -252,16 +252,19 @@ print('print() output arrives here');
 // for (let match of r) {print(match[0]+" at index "+match.index);}
 
 
+// ----------------------------------------------------------------------------
+
+// Control Flow
 
 // ----------------------------------------------------------------------------
 
 // Comparison operators, and if...else...
 // ===, !==, <, >, <=, >=, !, && and ||
 
-// let N = 10;
-// if (aNumber > N) {
-//   print(`${aNumber} is greater than ${N}`);
-// }
+let N = 10;
+if (aNumber > N) {
+  print(`${aNumber} is greater than ${N}`);
+}
 // if (aNumber === N) {
 //   print(`${aNumber} is strictly equal to ${N}`);
 // } else {
