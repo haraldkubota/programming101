@@ -525,33 +525,58 @@ a==b
 
 
 // ----------------------------------------------------------------------------
-// ----------------------------------------------------------------------------
 
 // More Control flow
 
+// ----------------------------------------------------------------------------
+
+
 // Ternary Operator (:?)
 
-// print((2 > 1) ? "Yes" : "No");
+// let a=(2 > 1) ? "Yes" : "No";
+// print(a);
 // // Short for
+// let a;
 // if (2 > 1) {
-//   print("Yes");
+//   a="Yes";
 // } else {
-//   print("No");
+//   a="No";
 // }
+// print(a);
+
 
 // switch case
+
+// let a=1;
+// switch(a) {
+//   case 1: print("Uno");
+//           // break;
+//   case 2: print("Due");
+//           // break;
+//   case 3: print("Tres");
+//           // break;
+//   default: print("Unknown number");
+// }
+
 
 // Comma Operator
 // Common use for , is
 // for (let i = 0, j = 1; i < board.length; i++, j++) {}
 
+
 // // Recursion
+// // Function calling itself
+// // To avoind infinite loops, there MUST be a condition (base case) when to NOT call itself again
+//
+// // https://en.wikipedia.org/wiki/Fibonacci_number
 // function fibonacci(n) {
 //   if (n===0) return 0;
 //   if (n===1) return 1;
 //   else return fibonacci(n-1)+fibonacci(n-2);
 // }
 // for (let i=0; i<10; ++i) print(fibonacci(i));
+
+// // Question: When does above function not ever stop calling itself again and again?
 
 // ----------------------------------------------------------------------------
 
