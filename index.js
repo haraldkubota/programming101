@@ -436,6 +436,8 @@ a==b
 // Loops
 // for(;;), while, do..while, for..in.., for..of.., forEach
 
+// for (INITIALIZE; CONDITION; CHANGE_LOOP_VARIABLE) {}
+//
 // for (let i=1; i<=4; i=i+1) {
 //   print(i);
 // }
@@ -444,17 +446,23 @@ a==b
 //   print(`for loop: i=${i}, anArray[${i}]=${anArray[i]}`);
 // }
 
-// // HOMEWORK
+// // Examples
 // // Print multiples of 7 up to 100
+// for (let i=7; i<100; i+=7) {
+//   print(i);
+// }
+// // HOMEWORK
 // // Print colors in colors[] like this: "I like color1, color2, ... colorLast-1 and colorLast."
-// // Hint: construct a string and add colors, commas, periods and "and" as needed.
+// // Hint: construct a string, add colors, commas, and for the last color, add "and" and a period.
 
+// // for(;;) can always be written as a while loop:
 // let i=0;
 // while (i < anArray.length) {
 //   print(`while: i=${i}, anArray[${i}]=${anArray[i]}`);
 //   ++i;
 // }
 
+// // do..while() loops execute the loop at least once.
 // let i=0;
 // do {
 //   print(`do..while: i=${i}, anArray[${i}]=${anArray[i]}`);
@@ -466,18 +474,26 @@ a==b
 //   print("Enter a number from 1 to 10");
 //   number = getANumber();
 // } while (number >= 1 && number <=10);
+
+// // for...in... vs for...of...
+
 // for (let index in colors) {
 //   print(`index=${index}`);
 // }
 // for (let color of colors) {
 //   print(`color=${color}`);
 // }
+
+// // You can both index and value!
 // // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+// print(Object.entries(colors));
+
 // for (let [index, color] of Object.entries(colors)) {
 //   print(`index=${index}, color=${color}`);
 // }
 
-// // Nested loops
+
+// // Nested loops: outer loop (x) and inner loop (y)
 // for (let x=0; x<10; ++x) {
 //   let s=`x=${x}: `;
 //   for (let y=0; y<10; ++y) {
@@ -488,19 +504,24 @@ a==b
 // }
 
 // // Breaking out of a loop
-// for (let i=0; i<10; ++i) {
-//   print(i);
-//   if (i > 5) {
+// // Needed
+// for (let i=0, sum=0; i<100; ++i) {
+//   print(`Start of the loop body: i=${i}, sum=${sum}`);
+//   sum += i;
+//   if (sum > 20) {
 //     break;
 //   }
-//   // print(i); // What is the output if I use print(i) here?
+//   print(`End of the loop body: i=${i}, sum=${sum}`);  // What is the output if I use print(i) here?
 // }
 // print("Finished the loop");
+// print(`After the loop: i=${i}, sum=${sum}`);  // What will i and sum be here?
+
 
 // // Continuing a loop (skip to its end)
 // for (let i=0; i<10; ++i) {
 //   // print(i);  // What is the output if I use print(i) here?
 //   if (i>4) {
+//     print('Moving on...');
 //     continue;
 //   }
 //   print(i);
@@ -509,18 +530,19 @@ a==b
 
 
 // // forEach method
+// // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+
+// print(anArray);
 
 // function display(v, i) {
 //   print(`v=${v}, i=${i}`);
 // }
 // anArray.forEach(display);
-// // Anonymous function:
-// anArray.forEach((v, i) => {print(`V=${v}, I=${i}`);});
-// anArray.forEach((x) => {print(`x=${x}`);});
 
-// outputDiv.innerText += JSON.stringify(aSong, null, 4)+"\n";;
-// let listOfSongs = [aSong, anotherSong, thirdSong, fourthSong];
-// outputDiv.innerText += "\n"+JSON.stringify(listOfSongs, null, 4);
+// // forEach() often uses very short functions which are not needed again
+// // Anonymous function:
+// anArray.forEach((v, i) => {print(`v=${v}, i=${i}`);});
+// anArray.forEach((x) => {print(`x=${x}`);});
 
 
 
@@ -593,24 +615,28 @@ a==b
 //   model: 'カローラ',
 //   brand: 'Toyota',
 // };
+// print(JSON.stringify(car, null, '  '));
+
 // print(car.color);
 // print(car.buildYear);
 // print(car.brand);
 // if (car.wheels.length === 4)
 //   print("It's a car with the normal amount of wheels");
-// else print("It's a car with an unusual amount of wheels");
+// else
+//   print("It's a car with an unusual amount of wheels");
 
-// // Adding a new property:
+// // // Adding a new property:
 // car.isHybrid = true;
 // print(car);
 // print(JSON.stringify(car, null, '  '));
 
-// Behavior of const on objects:
+// // Behavior of const on objects (same as arrays, because objects and arrays are both on the heap)
 // const b={};
 // print(JSON.stringify(b));
 // b.flag=true;
 // print(JSON.stringify(b));
-// // Error when I try b={test: 1};
+// // Error when I try:
+// b={test: 1};
 
 // // Task: Create a JSON structure with 5 city hall addresses
 // // Take them from https://tabunka.tokyo-tsunagari.or.jp/guide_eng/gov/01.html
@@ -626,6 +652,13 @@ a==b
 // NPM
 // Install javascripting: npm install -g javascripting
 // Run javascripting for review
+
+
+
+
+
+
+
 
 // ----------------------------------------------------------------------------
 
