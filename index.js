@@ -151,7 +151,7 @@ print('print() output arrives here');
 
 // // Excurse: Template Strings (AKA Template Literals): String Interpolation
 // // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-// // and https://en.wikipedia.org/wiki/String_interpolation 
+// // and https://en.wikipedia.org/wiki/String_interpolation
 
 // let n = 10;
 // print(`n=${n}`);
@@ -215,7 +215,6 @@ print('print() output arrives here');
 // n1 |= n2;
 // print(`After |= assignment: n1=${n1} (=0x${n1.toString(16)})`);
 
-
 // ----------------------------------------------------------------------------
 
 // Working with Strings
@@ -250,7 +249,6 @@ print('print() output arrives here');
 // print(aString.match(/\w*ou\w*/));
 // let r=aString.matchAll(/\w*ou\w*/g);
 // for (let match of r) {print(match[0]+" at index "+match.index);}
-
 
 // ----------------------------------------------------------------------------
 
@@ -299,7 +297,6 @@ print('print() output arrives here');
 // if (! (a > b)) print ("a is not larger than b");
 // if (!!! (a > b)) print ("a is not not not larger than b");
 
-
 // ----------------------------------------------------------------------------
 
 // Comparing == and ===
@@ -332,7 +329,6 @@ a==b
 // print(multiply(6,7));
 // print(divide(10,3));
 // print(divide(5,0));
-
 
 // // The following definitions of multiply() are all functionally identical
 // function multiply(x, y) {
@@ -396,7 +392,6 @@ a==b
 // Objects (functions, objects) are on the heap
 // See https://felixgerschau.com/javascript-memory-management/
 
-
 // let arr4 = Array(10);
 // print(arr4);
 // arr4.push(1);
@@ -422,14 +417,12 @@ a==b
 // arr5.unshift(22);
 // print(arr5);
 
-
 // Behavior of const on arrays:
 // const a=[10,20,30];
 // print(a);
 // a.push(40);
 // print(a);
 // // Error when I try a=[10,20];
-
 
 // ----------------------------------------------------------------------------
 
@@ -492,7 +485,6 @@ a==b
 //   print(`index=${index}, color=${color}`);
 // }
 
-
 // // Nested loops: outer loop (x) and inner loop (y)
 // for (let x=0; x<10; ++x) {
 //   let s=`x=${x}: `;
@@ -516,7 +508,6 @@ a==b
 // print("Finished the loop");
 // print(`After the loop: i=${i}, sum=${sum}`);  // What will i and sum be here?
 
-
 // // Continuing a loop (skip to its end)
 // for (let i=0; i<10; ++i) {
 //   // print(i);  // What is the output if I use print(i) here?
@@ -525,9 +516,8 @@ a==b
 //     continue;
 //   }
 //   print(i);
-// } 
+// }
 // print("Finished the loop");
-
 
 // // forEach method
 // // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
@@ -544,14 +534,11 @@ a==b
 // anArray.forEach((v, i) => {print(`v=${v}, i=${i}`);});
 // anArray.forEach((x) => {print(`x=${x}`);});
 
-
-
 // ----------------------------------------------------------------------------
 
 // More Control flow
 
 // ----------------------------------------------------------------------------
-
 
 // Ternary Operator (:?)
 
@@ -566,7 +553,6 @@ a==b
 // }
 // print(a);
 
-
 // switch case
 
 // let a=1;
@@ -580,11 +566,9 @@ a==b
 //   default: print("Unknown number");
 // }
 
-
 // Comma Operator
 // Common use for , is
 // for (let i = 0, j = 1; i < board.length; i++, j++) {}
-
 
 // // Recursion
 // // Function calling itself
@@ -602,35 +586,63 @@ a==b
 
 // ----------------------------------------------------------------------------
 
+// Objects, properties, methods and JSON.stringify()
+
 // JSON: JavaScript Object Notation
-// Simply a String representation of a JavaScript Opject:
-// let car = {
-//   color: 'red',
-//   wheels: ['front left', 'front right', 'rear left', 'rear right'],
-//   buildYear: 2022,
-//   powerSource: {
-//     hasBattery: true,
-//     hasCombustionEngine: true,
-//   },
-//   model: 'カローラ',
-//   brand: 'Toyota',
-// };
+// Simply a String representation of a JavaScript Object:
+let car = {
+  color: 'red',
+  wheels: ['front left', 'front right', 'rear left', 'rear right'],
+  buildYear: 2022,
+  powerSource: {
+    hasBattery: true,
+    hasCombustionEngine: true,
+  },
+  model: 'カローラ',
+  brand: 'Toyota',
+  sound: () => {
+    return 'voom voom';
+  },
+};
+
+// Printing an object does not work well:
+// print(car);
+
+// JSON.stringify(): takes an object and makes it a string (with optional formatting)
+
+// print(JSON.stringify(car));
 // print(JSON.stringify(car, null, '  '));
+
+// Opposite of JSON.stringify(): JSON.parse() takes a string and returns an object
+
+// let carString = JSON.stringify(car);
+// // let carString = JSON.stringify(car, null, '  ');
+// print(carString);
+// let newCar = JSON.parse(carString);
+// print(JSON.stringify(newCar));
+// // print(JSON.stringify(newCar, null, '  '));
+
+// Accessing properties
 
 // print(car.color);
 // print(car.buildYear);
 // print(car.brand);
 // if (car.wheels.length === 4)
 //   print("It's a car with the normal amount of wheels");
-// else
-//   print("It's a car with an unusual amount of wheels");
+// else print("It's a car with an unusual amount of wheels");
 
 // // // Adding a new property:
 // car.isHybrid = true;
-// print(car);
+
 // print(JSON.stringify(car, null, '  '));
 
+// Accessing methods (functions) of an object:
+
+// print(car.sound);
+// print(car.sound());
+
 // // Behavior of const on objects (same as arrays, because objects and arrays are both on the heap)
+
 // const b={};
 // print(JSON.stringify(b));
 // b.flag=true;
@@ -638,7 +650,7 @@ a==b
 // // Error when I try:
 // b={test: 1};
 
-// // Task: Create a JSON structure with 5 city hall addresses
+// // Task: Create a JSON structure with 5 city hall addresses (as an array)
 // // Take them from https://tabunka.tokyo-tsunagari.or.jp/guide_eng/gov/01.html
 // // Print them all out like this (using Tama as an example):
 // // City Office Tama
@@ -652,13 +664,6 @@ a==b
 // NPM
 // Install javascripting: npm install -g javascripting
 // Run javascripting for review
-
-
-
-
-
-
-
 
 // ----------------------------------------------------------------------------
 
@@ -722,7 +727,6 @@ middleButton.addEventListener('click', () => {
 // ----------------------------------------------------------------------------
 // DSA, but this better be not in a web page
 // ----------------------------------------------------------------------------
-
 
 // function benchmark(f, n) {
 //   let startTime = performance.now();
