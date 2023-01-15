@@ -590,20 +590,20 @@ a==b
 
 // JSON: JavaScript Object Notation
 // Simply a String representation of a JavaScript Object:
-let car = {
-  color: 'red',
-  wheels: ['front left', 'front right', 'rear left', 'rear right'],
-  buildYear: 2022,
-  powerSource: {
-    hasBattery: true,
-    hasCombustionEngine: true,
-  },
-  model: 'カローラ',
-  brand: 'Toyota',
-  sound: () => {
-    return 'voom voom';
-  },
-};
+// let car = {
+//   color: 'red',
+//   wheels: ['front left', 'front right', 'rear left', 'rear right'],
+//   buildYear: 2022,
+//   powerSource: {
+//     hasBattery: true,
+//     hasCombustionEngine: true,
+//   },
+//   model: 'カローラ',
+//   brand: 'Toyota',
+//   sound: () => {
+//     return 'voom voom';
+//   },
+// };
 
 // Printing an object does not work well:
 // print(car);
