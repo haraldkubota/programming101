@@ -431,9 +431,18 @@ a==b
 
 // for (INITIALIZE; CONDITION; CHANGE_LOOP_VARIABLE) {}
 //
-// for (let i=1; i<=4; i=i+1) {
+// for (let i=0; i<10; i=i+1) {
 //   print(i);
 // }
+// Same, but not idiomatic JavaScript:
+// for (let i=0; i<=9; i=i+1) {
+//   print(i);
+// }
+// Similar, but not idiomatic JavaScript either:
+// for (let i=1; i<=10; i=i+1) {
+//   print(i);
+// }
+
 // print(`anArray = [${anArray}]`);
 // for (let i=0; i<anArray.length; ++i) {
 //   print(`for loop: i=${i}, anArray[${i}]=${anArray[i]}`);
@@ -444,9 +453,20 @@ a==b
 // for (let i=7; i<100; i+=7) {
 //   print(i);
 // }
-// // HOMEWORK
+// // Task
 // // Print colors in colors[] like this: "I like color1, color2, ... colorLast-1 and colorLast."
 // // Hint: construct a string, add colors, commas, and for the last color, add "and" and a period.
+
+// print(colors);
+// let s="";
+// for (let i=0; i < colors.length; ++i) {
+//   if (i != colors.length-1) {
+//     s += `${colors[i]}, `;
+//   } else {
+//     s += `and ${colors[i]}.`;
+//   }
+// }
+// print(s);
 
 // // for(;;) can always be written as a while loop:
 // let i=0;
@@ -462,7 +482,7 @@ a==b
 //   ++i;
 // } while (i<anArray.length);
 
-// // When to use do..while.. or while..
+// When to use do..while.. or while..
 // do {
 //   print("Enter a number from 1 to 10");
 //   number = getANumber();
@@ -470,6 +490,7 @@ a==b
 
 // // for...in... vs for...of...
 
+// print(colors);
 // for (let index in colors) {
 //   print(`index=${index}`);
 // }
@@ -496,7 +517,6 @@ a==b
 // }
 
 // // Breaking out of a loop
-// // Needed
 // for (let i=0, sum=0; i<100; ++i) {
 //   print(`Start of the loop body: i=${i}, sum=${sum}`);
 //   sum += i;
@@ -524,15 +544,19 @@ a==b
 
 // print(anArray);
 
-// function display(v, i) {
-//   print(`v=${v}, i=${i}`);
+// function display(v) {
+//   print(`v=${v}`);
 // }
+
 // anArray.forEach(display);
 
 // // forEach() often uses very short functions which are not needed again
 // // Anonymous function:
-// anArray.forEach((v, i) => {print(`v=${v}, i=${i}`);});
-// anArray.forEach((x) => {print(`x=${x}`);});
+// print(anArray);
+// anArray.forEach((v, i) => {
+//   print(`v=${v}, i=${i}`);
+// });
+// Note that forEach() does not modify the original array. It also returns undefined.
 
 // ----------------------------------------------------------------------------
 
@@ -540,7 +564,11 @@ a==b
 
 // ----------------------------------------------------------------------------
 
-// Ternary Operator (:?)
+// The (only) Ternary Operator (:?)
+// Ternary = 3 arguments
+// Unary: a++
+// Binary: a+b
+// Ternary a ? b : c
 
 // let a=(2 > 1) ? "Yes" : "No";
 // print(a);
@@ -672,29 +700,29 @@ a==b
 
 // Button interactive (change counter)
 
-document.getElementById('buttons').style.display = 'inline';
-let counter = 0;
-const leftButton = document.getElementById('leftButton');
-const middleButton = document.getElementById('middleButton');
-const rightButton = document.getElementById('rightButton');
-leftButton.innerText = '<<';
-rightButton.innerText = '>>';
-middleButton.innerText = counter;
+// document.getElementById('buttons').style.display = 'inline';
+// let counter = 0;
+// const leftButton = document.getElementById('leftButton');
+// const middleButton = document.getElementById('middleButton');
+// const rightButton = document.getElementById('rightButton');
+// leftButton.innerText = '<<';
+// rightButton.innerText = '>>';
+// middleButton.innerText = counter;
 
-leftButton.addEventListener('click', () => {
-  counter = counter - 15;
-  middleButton.innerText = counter;
-});
-rightButton.addEventListener('click', () => {
-  counter = counter + 15;
-  middleButton.innerText = counter;
-});
-middleButton.addEventListener('click', () => {
-  middleButton.style.backgroundColor =
-    colors[Math.floor(Math.random() * colors.length)];
-  middleButton.style.transform = `rotate(${counter}deg)`;
-  print(counter);
-});
+// leftButton.addEventListener('click', () => {
+//   counter = counter - 15;
+//   middleButton.innerText = counter;
+// });
+// rightButton.addEventListener('click', () => {
+//   counter = counter + 15;
+//   middleButton.innerText = counter;
+// });
+// middleButton.addEventListener('click', () => {
+//   middleButton.style.backgroundColor =
+//     colors[Math.floor(Math.random() * colors.length)];
+//   middleButton.style.transform = `rotate(${counter}deg)`;
+//   print(counter);
+// });
 
 // ----------------------------------------------------------------------------
 
@@ -751,3 +779,17 @@ middleButton.addEventListener('click', () => {
 // benchmark(() => {
 //   arrayIndexOf(a, 10);
 // }, 100_000);
+
+// function collatz(n) {
+//   let count=0;
+//   while (n > 1) {
+//     if (n % 2 === 0) n /= 2;
+//     else n = 3 * n + 1;
+//     ++count;
+//   }
+//   return count;
+// }
+
+// print(collatz(97));
+// print(collatz(295));
+// print(collatz(259));
