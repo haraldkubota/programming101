@@ -680,6 +680,42 @@ a==b
 // // Error when I try:
 // b={test: 1};
 
+// Objects are on the Heap:
+
+// const b = { color: 'red', age: 20 };
+// print(JSON.stringify(b));
+// const c = b;
+// print(`b = ${JSON.stringify(b)}`);
+// print(`c = ${JSON.stringify(c)}`);
+// b.size = 9;
+// print(`b = ${JSON.stringify(b)}`);
+// print(`c = ${JSON.stringify(c)}`);
+
+// let d = [1, 2, 3, 4, 5];
+// let e = [d, d, d, d];
+// print(JSON.stringify(e));
+
+// // Attemt to change the 2 into 12 for the first item
+// e[0][1] = 12;
+// print(JSON.stringify(e));
+
+// e = [];
+// for (let i = 0; i < 4; ++i) {
+//   let row = new Array(5);
+//   row.fill(1);
+//   e.push(row);
+// }
+// print(`e = ${JSON.stringify(e)}`);
+// e[0][1] = 12;
+// print(`e = ${JSON.stringify(e)}`);
+
+// e = [];
+// e.push([1,2,3]);
+// e.push([1,2,3]);
+// e[0][1] = 9;
+// print(`e = ${JSON.stringify(e)}`);
+
+
 // // Task: Create a JSON structure with 5 city hall addresses (as an array)
 // // Take them from https://tabunka.tokyo-tsunagari.or.jp/guide_eng/gov/01.html
 // // Print them all out like this (using Tama as an example):
