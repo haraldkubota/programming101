@@ -469,18 +469,18 @@ a==b
 // print(s);
 
 // // for(;;) can always be written as a while loop:
-// let i=0;
+// let i=10;
 // while (i < anArray.length) {
 //   print(`while: i=${i}, anArray[${i}]=${anArray[i]}`);
 //   ++i;
 // }
 
 // // do..while() loops execute the loop at least once.
-// let i=0;
+// let i=10;
 // do {
 //   print(`do..while: i=${i}, anArray[${i}]=${anArray[i]}`);
 //   ++i;
-// } while (i<anArray.length);
+// } while (i < anArray.length);
 
 // When to use do..while.. or while..
 // do {
@@ -553,8 +553,8 @@ a==b
 // // forEach() often uses very short functions which are not needed again
 // // Anonymous function:
 // print(anArray);
-// anArray.forEach((v, i) => {
-//   print(`v=${v}, i=${i}`);
+// anArray.forEach((v) => {
+//   print(`v=${v}`);
 // });
 // Note that forEach() does not modify the original array. It also returns undefined.
 
@@ -570,14 +570,15 @@ a==b
 // Binary: a+b
 // Ternary a ? b : c
 
-// let a=(2 > 1) ? "Yes" : "No";
+// let a = (2 > 1) ? "Yes" : "No";
 // print(a);
+
 // // Short for
 // let a;
 // if (2 > 1) {
-//   a="Yes";
+//   a = "Yes";
 // } else {
-//   a="No";
+//   a = "No";
 // }
 // print(a);
 
@@ -599,18 +600,19 @@ a==b
 // for (let i = 0, j = 1; i < board.length; i++, j++) {}
 
 // // Recursion
+
 // // Function calling itself
 // // To avoind infinite loops, there MUST be a condition (base case) when to NOT call itself again
 //
 // // https://en.wikipedia.org/wiki/Fibonacci_number
 // function fibonacci(n) {
-//   if (n===0) return 0;
-//   if (n===1) return 1;
-//   else return fibonacci(n-1)+fibonacci(n-2);
+//   if (n === 0) return 0;
+//   if (n === 1) return 1;
+//   else return fibonacci(n - 1) + fibonacci(n - 2);
 // }
-// for (let i=0; i<10; ++i) print(fibonacci(i));
+// for (let i = 0; i < 10; ++i) print(fibonacci(i));
 
-// // Question: When does above function not ever stop calling itself again and again?
+// // Question: What happens if you call fibonacci() with an argument below 0?
 
 // ----------------------------------------------------------------------------
 
