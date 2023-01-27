@@ -620,23 +620,27 @@ a==b
 
 // JSON: JavaScript Object Notation
 // Simply a String representation of a JavaScript Object:
-// let car = {
-//   color: 'red',
-//   wheels: ['front left', 'front right', 'rear left', 'rear right'],
-//   buildYear: 2022,
-//   powerSource: {
-//     hasBattery: true,
-//     hasCombustionEngine: true,
-//   },
-//   model: 'カローラ',
-//   brand: 'Toyota',
-//   sound: () => {
-//     return 'voom voom';
-//   },
-// };
+let car = {
+  color: 'red',
+  wheels: ['front left', 'front right', 'rear left', 'rear right'],
+  buildYear: 2022,
+  powerSource: {
+    hasBattery: true,
+    hasCombustionEngine: true,
+  },
+  model: 'カローラ',
+  brand: 'Toyota',
+  sound: () => {
+    return 'voom voom';
+  },
+};
 
 // Printing an object does not work well:
 // print(car);
+
+// [object Object] means: It's an object of type Object. There's also
+// [object Array] and [object Function]
+// Object.prototype.toString.call([])
 
 // JSON.stringify(): takes an object and makes it a string (with optional formatting)
 
@@ -652,7 +656,7 @@ a==b
 // print(JSON.stringify(newCar));
 // // print(JSON.stringify(newCar, null, '  '));
 
-// Accessing properties
+// Accessing properties (= data) of an object:
 
 // print(car.color);
 // print(car.buildYear);
@@ -681,9 +685,10 @@ a==b
 // b={test: 1};
 
 // Objects are on the Heap:
+// See https://felixgerschau.com/javascript-memory-management/
 
 // const b = { color: 'red', age: 20 };
-// print(JSON.stringify(b));
+// print(`original b = ${JSON.stringify(b)}`);
 // const c = b;
 // print(`b = ${JSON.stringify(b)}`);
 // print(`c = ${JSON.stringify(c)}`);
@@ -691,29 +696,24 @@ a==b
 // print(`b = ${JSON.stringify(b)}`);
 // print(`c = ${JSON.stringify(c)}`);
 
-// let d = [1, 2, 3, 4, 5];
-// let e = [d, d, d, d];
-// print(JSON.stringify(e));
+// print(anArray)
+// let twoDArray = [anArray, anArray, anArray];
+// print(JSON.stringify(twoDArray));
 
-// // Attemt to change the 2 into 12 for the first item
-// e[0][1] = 12;
-// print(JSON.stringify(e));
+// // Attemt to change the 11 into 99 for the first item
+// twoDArray[0][1] = 99;
+// print(JSON.stringify(twoDArray));
 
-// e = [];
-// for (let i = 0; i < 4; ++i) {
+// let twoDArray = [];
+// for (let i = 0; i < 3; ++i) {
 //   let row = new Array(5);
 //   row.fill(1);
-//   e.push(row);
+//   twoDArray.push(row);
+//   // twoDArray.push([2, 2, 2, 2, 2]);
 // }
-// print(`e = ${JSON.stringify(e)}`);
-// e[0][1] = 12;
-// print(`e = ${JSON.stringify(e)}`);
-
-// e = [];
-// e.push([1,2,3]);
-// e.push([1,2,3]);
-// e[0][1] = 9;
-// print(`e = ${JSON.stringify(e)}`);
+// print(`twoDArray = ${JSON.stringify(twoDArray)}`);
+// twoDArray[0][1] = 99;
+// print(`twoDArray = ${JSON.stringify(twoDArray)}`);
 
 
 // // Task: Create a JSON structure with 5 city hall addresses (as an array)
