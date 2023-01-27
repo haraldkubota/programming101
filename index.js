@@ -564,7 +564,7 @@ a==b
 
 // ----------------------------------------------------------------------------
 
-// The (only) Ternary Operator (:?)
+// The conditional operator ?: (also the only ternary operator)
 // Ternary = 3 arguments
 // Unary: a++
 // Binary: a+b
